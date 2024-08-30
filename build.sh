@@ -13,7 +13,7 @@ RELEASE="$(rpm -E %fedora)"
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-rpm-ostree install adobe-source-code-pro-fonts android-tools bpftop cascadia-code-fonts containererd.io \
+rpm-ostree install adobe-source-code-pro-fonts android-tools bpftop \
 edk2-ovmf flatpak-builder genisoimage iotop kcli libvirt libvirt-nss p7zip-plugins p7zip podman-compose \
 podman-tui podmansh powertop qemu-char-spice qemu-device-display-virtio-gpu qemu-device-display-virtio-vga \
 qemu-device-usb-redirect qemu-img qemu-system-x86-core qemu-user-binfmt qemu-user-static qemu rocm-hip \
