@@ -14,7 +14,7 @@ RELEASE="$(rpm -E %fedora)"
 
 # this installs a package from fedora repos
 rpm-ostree install adobe-source-code-pro-fonts android-tools bpftop \
-edk2-ovmf flatpak-builder genisoimage iotop kcli libvirt libvirt-nss p7zip-plugins p7zip podman-compose \
+edk2-ovmf flatpak-builder genisoimage iotop libvirt libvirt-nss p7zip-plugins p7zip podman-compose \
 podman-tui podmansh powertop qemu-char-spice qemu-device-display-virtio-gpu qemu-device-display-virtio-vga \
 qemu-device-usb-redirect qemu-img qemu-system-x86-core qemu-user-binfmt qemu-user-static qemu rocm-hip \
 rocm-opencl rocm-smi ubuntu-family-fonts udica umoci virt-manager virt-viewer ydotool dbus-x11 
