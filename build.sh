@@ -12,6 +12,10 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
+dnf copr enable ublue-os/akmods
+dnf install jupiter
+
+
 # this installs a package from fedora repos
 dnf install adobe-source-code-pro-fonts android-tools bpftop \
 edk2-ovmf flatpak-builder genisoimage iotop libvirt libvirt-nss p7zip-plugins p7zip podman-compose \
