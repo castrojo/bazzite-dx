@@ -1,5 +1,5 @@
 ---
-name: build-ublue-custom
+name: build
 on:
   pull_request:
     branches:
@@ -15,7 +15,7 @@ on:
 
 env:
   MY_IMAGE_NAME: "${{ github.event.repository.name }}"  # the name of the image produced by this build, matches repo names
-  MY_IMAGE_DESC: "My Customized Universal Blue Image"
+  MY_IMAGE_DESC: "Bluefin with more stuff"
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"  # do not edit
 
 jobs:
