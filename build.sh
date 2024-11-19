@@ -12,13 +12,13 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf5 install dnf-plugins-core
+dnf5 install -y dnf-plugins-core
 dnf5 copr enable ublue-os/akmods
-dnf5 install jupiter
+dnf5 install -y jupiter
 
 
 # this installs a package from fedora repos
-dnf5 install adobe-source-code-pro-fonts android-tools bpftop \
+dnf5 install -y adobe-source-code-pro-fonts android-tools bpftop \
 edk2-ovmf flatpak-builder genisoimage iotop libvirt libvirt-nss p7zip-plugins p7zip podman-compose \
 podman-tui podmansh powertop qemu-char-spice qemu-device-display-virtio-gpu qemu-device-display-virtio-vga \
 qemu-device-usb-redirect qemu-img qemu-system-x86-core qemu-user-binfmt qemu-user-static qemu rocm-hip \
