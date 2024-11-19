@@ -16,11 +16,7 @@ dnf5 install -y dnf-plugins-core
 dnf5 copr enable ublue-os/akmods
 
 # this installs a package from fedora repos
-dnf5 install -y adobe-source-code-pro-fonts android-tools bpftop \
-edk2-ovmf flatpak-builder genisoimage iotop libvirt libvirt-nss p7zip-plugins p7zip podman-compose \
-podman-tui podmansh powertop qemu-char-spice qemu-device-display-virtio-gpu qemu-device-display-virtio-vga \
-qemu-device-usb-redirect qemu-img qemu-system-x86-core qemu-user-binfmt qemu-user-static qemu rocm-hip \
-rocm-opencl rocm-smi udica virt-manager virt-viewer ydotool dbus-x11 
+dnf5 install -y iotop
 
 #				"docker-ce",
 #				"docker-ce-cli",
