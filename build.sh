@@ -14,8 +14,6 @@ RELEASE="$(rpm -E %fedora)"
 
 dnf5 install -y dnf-plugins-core
 dnf5 copr enable ublue-os/akmods
-dnf5 install -y jupiter
-
 
 # this installs a package from fedora repos
 dnf5 install -y adobe-source-code-pro-fonts android-tools bpftop \
