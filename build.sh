@@ -12,11 +12,10 @@ RELEASE="$(rpm -E %fedora)"
 # List of rpmfusion packages can be found here:
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
-dnf5 install -y dnf-plugins-core
-dnf5 copr enable ublue-os/akmods
+dnf5 copr enable -y ublue-os/akmods
 
 # this installs a package from fedora repos
-dnf5 install iotop
+dnf5 install -y iotop
 
 #				"docker-ce",
 #				"docker-ce-cli",
