@@ -16,7 +16,7 @@ dnf5 install -y dnf-plugins-core
 dnf5 copr enable ublue-os/akmods
 
 # this installs a package from fedora repos
-dnf5 install -y iotop
+dnf5 install iotop
 
 #				"docker-ce",
 #				"docker-ce-cli",
