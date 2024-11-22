@@ -8,8 +8,8 @@ body:
   - type: textarea
     id: package
     attributes:
-      label: Describe the package
-      description: Describe the package you want pinned.
+      label: Describe the Package
+      description: Describe the package you want pinned and why
       placeholder: Pin foobar to version 1.2
       value: "Package foobar version 1.2 blew up, we need to revert to 1.1"
     validations:
@@ -17,8 +17,8 @@ body:
   - type: textarea
     id: bodhi
     attributes:
-      label: Bodhi page 
-      description: Add the bodhi link to the working version
+      label: Bodhi Link (Optional)  
+      description: Add the bodhi link to the working version, this is very useful in order to pin a package quickly
       placeholder: Bodhi link
       value: "Pin to this version please: https://bodhi.fedoraproject.org/updates/FEDORA-2024-45d587348e"
     validations:
