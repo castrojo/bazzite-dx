@@ -4,7 +4,6 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-dnf5 copr enable -y ublue-os/akmods
 dnf5 group install -y cosmic-desktop cosmic-desktop-apps window-managers
 
 
