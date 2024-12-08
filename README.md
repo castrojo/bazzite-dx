@@ -5,4 +5,4 @@ Larger, more aggressive Bluefin
 
 # Purpose
 
-Experimentation and reckless feeding. 
+Experimentation and reckless feeding. Note that I don't use this image regularly, usually for one off testing so it may change abruptly. 
