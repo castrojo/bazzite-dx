@@ -4,7 +4,8 @@ set -ouex pipefail
 
 RELEASE="$(rpm -E %fedora)"
 
-dnf5 group install -y cosmic-desktop cosmic-desktop-apps window-managers
+
+dnf group install -y Workstation
 
 
 #### Example for enabling a System Unit File

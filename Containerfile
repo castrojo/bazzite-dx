@@ -1,4 +1,4 @@
-FROM ghcr.io/ublue-os/bluefin:stable
+FROM quay.io/centos-bootc/centos-bootc:stream10
 
 COPY build.sh /tmp/build.sh
 
