@@ -2,9 +2,6 @@
 
 set -ouex pipefail
 
-RELEASE="$(rpm -E %fedora)"
-
-
 dnf group install -y --nobest Workstation
 
 dnf install -y \
