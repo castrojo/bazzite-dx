@@ -129,7 +129,7 @@ build-vm type="raw" rebuild="1":
 
   sudo chown -R $USER:$USER output
 
-run-vm type="qcow2" rebuild="0" ram="6GiB":
+run-vm rebuild="0" type="qcow2" ram="6GiB":
   #!/usr/bin/env bash
 
   [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the ISO" && just build-vm {{ type }} {{ rebuild }}
