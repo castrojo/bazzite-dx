@@ -126,8 +126,6 @@ build-vm image type="qcow2":
     $TARGET_IMAGE
 
   sudo chown -R $USER:$USER output
-  echo "making the image biggerer"
-  sudo qemu-img resize output/qcow2/disk.qcow2 80G
 
 run-vm:
   virsh dominfo {{ repo_organization }}-{{ image_name }} &> /dev/null && \
