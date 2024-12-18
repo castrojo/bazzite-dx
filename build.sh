@@ -7,6 +7,10 @@ dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-10.noarch.
 
 dnf group install -y --nobest Workstation
 
+dnf install -y \
+    gnome-extensions-app \
+    gnome-shell-extension-appindicator
+
 systemctl enable \
     gdm.service
 
