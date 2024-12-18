@@ -2,9 +2,10 @@
 
 set -ouex pipefail
 
-dnf group install -y GNOME
 
- systemctl enable \
+dnf group install -y --nobest Workstation
+
+systemctl enable \
     gdm.service
 
 
