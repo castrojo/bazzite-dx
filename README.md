@@ -27,6 +27,8 @@ just build
 just build-vm localhost/achillobator qcow2
 ```
 
+Username and password are `centos`/`centos`
+
 ## Current Ideas
 
 - hyperscale sig provides newer kernels, we don't need to stay old old.
