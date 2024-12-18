@@ -98,7 +98,7 @@ build centos_version="stream10" tag="latest":
         --tag "${image_name}:${tag}" \
         .
 
-build-vm type="raw" rebuild="1":
+build-vm rebuild="1" type="raw" :
   #!/usr/bin/env bash
   set -euo pipefail
   TARGET_IMAGE=localhost/{{ image_name }}:latest
@@ -132,7 +132,7 @@ build-vm type="raw" rebuild="1":
 run-vm rebuild="0" type="qcow2" ram="6GiB":
   #!/usr/bin/env bash
 
-  [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the ISO" && just build-vm {{ type }} {{ rebuild }}
+  [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the ISO" && just build-vm {{ rebuild }} {{ type }}
 
   systemd-vmspawn \
     -M "achillobator" \
