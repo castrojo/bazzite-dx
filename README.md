@@ -22,3 +22,4 @@ With most of my user facing life being in my browser and flatpak, a slower caden
 
 - hyperscale sig provides newer kernels, we don't need to stay old old.
 - EPEL will fill in lots of stuff
+- Long lived and boring, we expect even less maintenance than Fedora-based Bluefin
