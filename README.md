@@ -1,8 +1,14 @@
 # Achillobator
-Larger, more aggressive Bluefin
+Larger, more aggressive Bluefin. Bluefin but built on CentOS Stream10.`bluefin:lts` prototype. 
 
 ![image](https://github.com/user-attachments/assets/2e160934-44e6-4aee-b2b8-accb3bcf0a41)
 
 # Purpose
 
-Experimentation and reckless feeding. Note that I don't use this image regularly, usually for one off testing so it may change abruptly. 
+Experimentation and reckless feeding. PRs gladly welcomed. Not sure how many people would be interested in this so I guess we'll find out. 
+
+## Current Ideas
+
+- hyperscale sig provides newer kernels, we don't need to stay old old.
+- GNOME47 will be shipping, we have builds for our stuff already
+- EPEL will fill in lots of stuff
