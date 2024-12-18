@@ -9,7 +9,8 @@ dnf group install -y --nobest Workstation
 
 dnf install -y \
     gnome-extensions-app \
-    gnome-shell-extension-appindicator
+    gnome-shell-extension-appindicator \
+    gnome-shell-extension-dash-to-dock
 
 systemctl enable \
     gdm.service
