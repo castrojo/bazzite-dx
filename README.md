@@ -18,6 +18,15 @@ With most of my user facing life being in my browser and flatpak, a slower caden
 - GNOME47 will be shipping, we have builds for our stuff already, 6.12 kernel covers Framework's current laptops
 - Is there going to be a reliable GNOME COPR for El10?
 
+## Building
+
+To build locally and then spit out a VM: 
+
+```
+just build
+just build-vm localhost/achillobator qcow2
+```
+
 ## Current Ideas
 
 - hyperscale sig provides newer kernels, we don't need to stay old old.
