@@ -8,9 +8,9 @@ dnf install -y \
     gnome-shell-extension-dash-to-dock
 
 #Add flathub and install the flatpaks from bluefin
-flatpak config --system --set languages "*"
-flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak install --system -y \
+sudo flatpak config --system --set languages "*"
+sudo flatpak remote-add --system flathub https://flathub.org/repo/flathub.flatpakrepo
+sudo flatpak install --system -y \
 app/io.github.dvlv.boxbuddyrs/x86_64/stable \
 app/com.github.rafostar.Clapper/x86_64/stable \
 app/org.fedoraproject.MediaWriter/x86_64/stable \
