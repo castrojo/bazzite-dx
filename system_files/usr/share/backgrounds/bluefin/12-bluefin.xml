@@ -9,24 +9,24 @@
         </starttime>
 
         <static>
-                <file>/usr/share/backgrounds/bluefin/12-bluefin-day.jxl</file>
+                <file>/usr/share/backgrounds/bluefin/12-bluefin-day.png</file>
                 <duration>28800.0</duration>
         </static>
 
         <transition type="overlay">
                 <duration>7200.0</duration>
-                <from>/usr/share/backgrounds/bluefin/12-bluefin-day.jxl</from>
-                <to>/usr/share/backgrounds/bluefin/12-bluefin-night.jxl</to>
+                <from>/usr/share/backgrounds/bluefin/12-bluefin-day.png</from>
+                <to>/usr/share/backgrounds/bluefin/12-bluefin-night.png</to>
         </transition>
 
         <static>
-                <file>/usr/share/backgrounds/bluefin/12-bluefin-night.jxl</file>
+                <file>/usr/share/backgrounds/bluefin/12-bluefin-night.png</file>
                 <duration>43200.0</duration>
         </static>
 
         <transition type="overlay">
                 <duration>7200.0</duration>
-                <from>/usr/share/backgrounds/bluefin/12-bluefin-night.jxl</from>
-                <to>/usr/share/backgrounds/bluefin/12-bluefin-day.jxl</to>
+                <from>/usr/share/backgrounds/bluefin/12-bluefin-night.png</from>
+                <to>/usr/share/backgrounds/bluefin/12-bluefin-day.png</to>
         </transition>
 </background>
