@@ -1,5 +1,5 @@
 # Achillobator
-Larger, more aggressive Bluefin. Bluefin but built on CentOS Stream10.`bluefin:lts` prototype. 
+Larger, more aggressive Bluefin. `bluefin:lts` prototype built on CentOS Stream10.
 
 ![image](https://github.com/user-attachments/assets/2e160934-44e6-4aee-b2b8-accb3bcf0a41)
 
