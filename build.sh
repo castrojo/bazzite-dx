@@ -7,6 +7,14 @@ dnf install -y \
     gnome-shell-extension-appindicator \
     gnome-shell-extension-dash-to-dock
 
+
+# Convince the installer we are in CI
+touch /.dockerenv
+
+# Make these so script will work
+mkdir -p /var/home
+mkdir -p /var/roothome
+
 # install homebrew like bluefin does :)
 curl --retry 3 -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 chmod +x /tmp/brew-install
