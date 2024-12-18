@@ -130,8 +130,11 @@ build-vm image type="qcow2":
   sudo qemu-img resize output/qcow2/disk.qcow2 80G
 
 run-vm:
+  virsh dominfo {{ repo_organization }}-{{ image_name }} &> /dev/null && \
+  ( virsh destroy {{ repo_organization }}-{{ image_name }} ; \
+   virsh undefine {{ repo_organization }}-{{ image_name }} ) 
   virt-install --import \
-  --name "${repo_organization}-${image_name}" \
+  --name {{ repo_organization }}-{{ image_name }} \
   --disk output/qcow2/disk.qcow2,format=qcow2,bus=virtio \
   --memory 4096 \
   --vcpus 4 \
@@ -139,4 +142,4 @@ run-vm:
   --network bridge:virbr0 \
   --graphics vnc
 
-  virsh start "${repo_organization}-${image_name}"
+  virsh start {{ repo_organization }}-{{ image_name }}

@@ -1,0 +1,8 @@
+[[customizations.user]]
+name = "centos"
+password = "centos"
+groups = ["wheel"]
+
+[[customizations.filesystem]]
+mountpoint = "/"
+minsize = "20 GiB"
