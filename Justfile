@@ -98,10 +98,12 @@ build centos_version="stream10" tag="latest":
         --tag "${image_name}:${tag}" \
         .
 
-build-vm image type="qcow2":
+build-vm type="raw" rebuild="1":
   #!/usr/bin/env bash
   set -euo pipefail
-  TARGET_IMAGE={{ image }}
+  TARGET_IMAGE=localhost/{{ image_name }}:latest
+
+  [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the image" && just build
 
   if ! sudo podman image exists $TARGET_IMAGE ; then
     echo "Ensuring image is on root storage"
@@ -127,17 +129,16 @@ build-vm image type="qcow2":
 
   sudo chown -R $USER:$USER output
 
-run-vm:
-  virsh dominfo {{ repo_organization }}-{{ image_name }} &> /dev/null && \
-  ( virsh destroy {{ repo_organization }}-{{ image_name }} ; \
-  virsh undefine {{ repo_organization }}-{{ image_name }} ) 
-  virt-install --import \
-  --name {{ repo_organization }}-{{ image_name }} \
-  --disk output/qcow2/disk.qcow2,format=qcow2,bus=virtio \
-  --memory 4096 \
-  --vcpus 4 \
-  --os-variant centos-stream9 \
-  --network bridge:virbr0 \
-  --graphics vnc
+run-vm type="qcow2" rebuild="0" ram="6GiB":
+  #!/usr/bin/env bash
 
-  virsh start {{ repo_organization }}-{{ image_name }}
+  [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the ISO" && just build-vm {{ type }} {{ rebuild }}
+
+  systemd-vmspawn \
+    -M "achillobator" \
+    --console=gui \
+    --cpus=2 \
+    --ram=$(echo 6G| /usr/bin/numfmt --from=iec) \
+    --network-user-mode \
+    --vsock=false --pass-ssh-key=false \
+    -i ./output/**/*.{{ type }}

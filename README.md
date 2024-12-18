@@ -23,8 +23,7 @@ With most of my user facing life being in my browser and flatpak, a slower caden
 To build locally and then spit out a VM: 
 
 ```
-just build
-just build-vm localhost/achillobator qcow2
+just run-vm 1 # rebuilds the image + vm
 ```
 
 qcow2 file is written to the `output/` directory. Username and password are `centos`/`centos`

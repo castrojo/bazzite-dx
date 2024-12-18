@@ -11,7 +11,8 @@ dnf install -y \
 # Test ublue coprs
 dnf config-manager --add-repo https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/centos-stream-10/ublue-os-staging-centos-stream-10.repo
 dnf install -y \
-    gnome-shell-extension-logo-menu 	
+    gnome-shell-extension-logo-menu
+# dnf --enablerepo epel-testing install gnome-shell-extension-blur-my-shell # Will work on 19/12
 
 # Convince the installer we are in CI
 touch /.dockerenv
