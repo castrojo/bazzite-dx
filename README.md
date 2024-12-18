@@ -7,6 +7,10 @@ Larger, more aggressive Bluefin. `bluefin:lts` prototype built on CentOS Stream1
 
 Experimentation and reckless feeding. PRs gladly welcomed. Not sure how many people would be interested in this so I guess we'll find out. 
 
+# Current Status
+
+Working on a base image first before trying the desktop parts. The more people dive in the faster we can get there. 😄
+
 ## Current Ideas
 
 - hyperscale sig provides newer kernels, we don't need to stay old old.
