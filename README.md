@@ -27,7 +27,7 @@ just build
 just build-vm localhost/achillobator qcow2
 ```
 
-Username and password are `centos`/`centos`
+qcow2 file is written to the `output/` directory. Username and password are `centos`/`centos`
 
 ## Current Ideas
 
