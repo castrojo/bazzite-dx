@@ -7,6 +7,10 @@ dnf install -y \
     gnome-shell-extension-appindicator \
     gnome-shell-extension-dash-to-dock
 
+# Test ublue coprs
+dnf config-manager --add-repo https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/centos-stream-10/ublue-os-staging-centos-stream-10.repo
+dnf install -y \
+    gnome-shell-extension-logo-menu 	
 
 # Convince the installer we are in CI
 touch /.dockerenv
