@@ -1,9 +1,6 @@
-FROM quay.io/centos-bootc/centos-bootc:stream10
+FROM ghcr.io/centos-workstation/main:latest
 
 COPY build.sh /tmp/build.sh
-
-# See https://github.com/centos-workstation/achillobator/issues/3
-RUN mkdir -p /var/roothome
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
