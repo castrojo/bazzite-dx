@@ -11,6 +11,10 @@ dnf install -y \
 # Convince the installer we are in CI
 touch /.dockerenv
 
+# Workarounds
+mkdir -p /var/home
+mkdir -p /var/roothome
+
 # Homebrew
 curl --retry 3 -Lo /tmp/brew-install https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh
 chmod +x /tmp/brew-install
