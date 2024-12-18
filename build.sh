@@ -2,12 +2,7 @@
 
 set -ouex pipefail
 
-dnf group install -y --nobest Workstation
-
-dnf install -y \
-	gnome-tweaks \
-	gnome-extensions-app \
-	gnome-shell-extension-appindicator \
+dnf group install -y GNOME
 
  systemctl enable \
     gdm.service
