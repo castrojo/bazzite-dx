@@ -2,12 +2,13 @@ FROM ghcr.io/centos-workstation/main:latest
 
 COPY build.sh /tmp/build.sh
 
-RUN mkdir -p /var/run
-RUN ln -sf /var/run /run
 
 RUN mkdir -p /var/lib/alternatives && \
-    /tmp/build.sh && \
-    ostree container commit
+    /tmp/build.sh 
+
+RUN ln -sf ../run /var/run
+
+RUN ostree container commit
 
 RUN bootc container lint
 ## NOTES:

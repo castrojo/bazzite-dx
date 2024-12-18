@@ -41,6 +41,8 @@ app/org.mozilla.Thunderbird/x86_64/stable \
 runtime/org.gtk.Gtk3theme.adw-gtk3/x86_64/3.22 \
 runtime/org.gtk.Gtk3theme.adw-gtk3-dark/x86_64/3.22 \
 
+dnf remove -y $(dnf repoquery --installonly --latest-limit 1 -q)
+
 
 
 systemctl enable \

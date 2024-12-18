@@ -132,7 +132,7 @@ build-vm image type="qcow2":
 run-vm:
   virsh dominfo {{ repo_organization }}-{{ image_name }} &> /dev/null && \
   ( virsh destroy {{ repo_organization }}-{{ image_name }} ; \
-   virsh undefine {{ repo_organization }}-{{ image_name }} ) 
+  virsh undefine {{ repo_organization }}-{{ image_name }} ) 
   virt-install --import \
   --name {{ repo_organization }}-{{ image_name }} \
   --disk output/qcow2/disk.qcow2,format=qcow2,bus=virtio \
