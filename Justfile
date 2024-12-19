@@ -114,6 +114,7 @@ build-vm rebuild="1" type="qcow2" :
     --pull=newer \
     --security-opt label=type:unconfined_t \
     --network=host \
+    -v $(pwd)/image-builder.config.toml:/config.toml:ro \
     -v $(pwd)/output:/output \
     -v /var/lib/containers/storage:/var/lib/containers/storage \
     localhost/bib:dev \
