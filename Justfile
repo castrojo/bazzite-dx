@@ -105,10 +105,8 @@ build-vm rebuild="1" type="raw" :
 
   [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the image" && just build
 
-  if ! sudo podman image exists $TARGET_IMAGE ; then
-    echo "Ensuring image is on root storage"
-    sudo podman image scp $USER@localhost::$TARGET_IMAGE root@localhost:: 
-  fi
+  echo "Ensuring image is on root storage"
+  sudo podman image scp $USER@localhost::$TARGET_IMAGE root@localhost:: 
   
   echo "Cleaning up previous build"
   sudo rm -rf output || true
