@@ -132,6 +132,8 @@ build-vm rebuild="1" type="raw" :
 run-vm rebuild="0" type="qcow2" ram="6GiB":
   #!/usr/bin/env bash
 
+  set -euo pipefail
+
   [ "{{ rebuild }}" -eq 1 ] && echo "Rebuilding the ISO" && just build-vm {{ rebuild }} {{ type }}
 
   systemd-vmspawn \

@@ -27,5 +27,8 @@ chmod +x /tmp/brew-install
 /tmp/brew-install
 tar --zstd -cvf /usr/share/homebrew.tar.zst /home/linuxbrew/.linuxbrew
 
+rm -f /.dockerenv
+
 # Services
 systemctl enable dconf-update.service
+systemctl disable mcelog.service
