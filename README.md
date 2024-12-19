@@ -12,6 +12,7 @@ Experimentation and reckless feeding. PRs gladly welcomed. Not sure how many peo
 Working on a base image first before trying the desktop parts. The more people dive in the faster we can get there. 😄
 
 ![image](https://github.com/user-attachments/assets/a8142495-68b1-4925-b96c-249fcb15bf48)
+(Note, you'll need to add the flathub remote and install the apps by hand for now)
 
 
 ## Rationale
