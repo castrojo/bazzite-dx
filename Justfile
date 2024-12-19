@@ -70,16 +70,12 @@ build centos_version="stream10" tag="latest":
     centos_version={{ centos_version }}
 
     # Get Version
-    if [[ "${tag}" =~ stable ]]; then
-        ver="${centos_version}.$(date +%Y%m%d)"
-    else
-        ver="${tag}-${centos_version}.$(date +%Y%m%d)"
-    fi
+    ver="${tag}-${centos_version}.$(date +%Y%m%d)"
 
     BUILD_ARGS=()
-    BUILD_ARGS+=("--build-arg" "CENTOS_MAJOR_VERSION=${centos_version}")
-    # BUILD_ARGS+=("--build-arg" "IMAGE_NAME=${image_name}")
-    # BUILD_ARGS+=("--build-arg" "IMAGE_VENDOR={{ repo_organization }}")
+    BUILD_ARGS+=("--build-arg" "MAJOR_VERSION=${centos_version}")
+    BUILD_ARGS+=("--build-arg" "IMAGE_NAME=${image_name}")
+    BUILD_ARGS+=("--build-arg" "IMAGE_VENDOR={{ repo_organization }}")
     if [[ -z "$(git status -s)" ]]; then
         BUILD_ARGS+=("--build-arg" "SHA_HEAD_SHORT=$(git rev-parse --short HEAD)")
     fi

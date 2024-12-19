@@ -1,4 +1,8 @@
-FROM ghcr.io/centos-workstation/main:latest
+FROM ghcr.io/centos-workstation/main:${MAJOR_VERSION:-latest}
+
+ARG IMAGE_NAME="${IMAGE_NAME:-achillobator}"
+ARG IMAGE_VENDOR="${IMAGE_VENDOR:-centos-workstation}"
+ARG MAJOR_VERSION="${MAJOR_VERSION:-latest}"
 
 COPY system_files /
 COPY build.sh /tmp/build.sh
