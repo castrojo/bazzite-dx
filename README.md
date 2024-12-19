@@ -12,8 +12,12 @@ Experimentation and reckless feeding. PRs gladly welcomed. Not sure how many peo
 Working on a base image first before trying the desktop parts. The more people dive in the faster we can get there. 😄
 
 ![image](https://github.com/user-attachments/assets/a8142495-68b1-4925-b96c-249fcb15bf48)
-(Note, you'll need to add the flathub remote and install the apps by hand for now)
 
+### Caveats
+
+- You need add the flathub remote and install the apps by hand
+- Do not rebase to this from an existing Fedora image, ain't no one testing that. Also the filesystems are going to be different, etc. We recommend a VM for now
+- This will not be a 1:1 recreation, nor will it offer nvidia, -dx, etc. This is mostly an exercise into seeing what work would need to be done.
 
 ## Rationale
 
