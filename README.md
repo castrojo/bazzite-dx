@@ -17,7 +17,7 @@ Working on a base image first before trying the desktop parts. The more people d
 
 - You need add the flathub remote and install the apps by hand
 - Do not rebase to this from an existing Fedora image, ain't no one testing that. Also the filesystems are going to be different, etc. We recommend a VM for now
-- This will not be a 1:1 recreation, nor will it offer nvidia, -dx, etc. This is mostly an exercise into seeing what work would need to be done, so it'll be a chunker. 
+- This will not be a 1:1 recreation, nor will it offer nvidia, -dx, etc. This is mostly an exercise into seeing what work would need to be done, so it'll be a prototype. No guarantees yet.
 
 ## Rationale
 
