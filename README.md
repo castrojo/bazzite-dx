@@ -11,6 +11,9 @@ Experimentation and reckless feeding. PRs gladly welcomed. Not sure how many peo
 
 Working on a base image first before trying the desktop parts. The more people dive in the faster we can get there. 😄
 
+![image](https://github.com/user-attachments/assets/a8142495-68b1-4925-b96c-249fcb15bf48)
+
+
 ## Rationale
 
 With most of my user facing life being in my browser and flatpak, a slower cadenced OS has a proven use case. With `bootc` being a critical piece of RHEL image mode, it means that stack in CentOS will be well maintained. And with the flexibility of the container model, we can source content from anywhere. This is a spike to see if it's worth adding this as a `bluefin:lts` branch, or worse case, a starting point for someone who wants to grow a community around this use case. 
