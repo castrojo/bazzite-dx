@@ -51,7 +51,8 @@ dnf install -y \
     distrobox \
     gnome-extensions-app \
     gnome-shell-extension-appindicator \
-    gnome-shell-extension-dash-to-dock
+    gnome-shell-extension-dash-to-dock \
+    glow
 
 # Test ublue coprs
 dnf config-manager --add-repo https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/centos-stream-10/ublue-os-staging-centos-stream-10.repo
