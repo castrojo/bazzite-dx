@@ -94,7 +94,7 @@ build centos_version="stream10" tag="latest":
         --tag "${image_name}:${tag}" \
         .
 
-build-vm rebuild="1" type="raw" :
+build-vm rebuild="1" type="qcow2" :
   #!/usr/bin/env bash
   set -euo pipefail
   TARGET_IMAGE=localhost/{{ image_name }}:latest
@@ -104,7 +104,7 @@ build-vm rebuild="1" type="raw" :
   echo "Ensuring image is on root storage"
   sudo podman image scp $USER@localhost::$TARGET_IMAGE root@localhost:: 
   
-  echo "Cleaning up previous build"
+  sudo podman image scp $USER@localhost::bib:dev root@localhost::
   sudo rm -rf output || true
   mkdir -p output
   sudo podman run \
@@ -113,17 +113,17 @@ build-vm rebuild="1" type="raw" :
     --privileged \
     --pull=newer \
     --security-opt label=type:unconfined_t \
-    -v $(pwd)/image-builder.config.toml:/config.toml:ro \
+    --network=host \
     -v $(pwd)/output:/output \
     -v /var/lib/containers/storage:/var/lib/containers/storage \
-    quay.io/centos-bootc/bootc-image-builder:latest \
-    --type {{ type }} \
+    localhost/bib:dev \
+    --type iso \
     --local \
-    $TARGET_IMAGE
+    localhost/achillobator:latest
 
   sudo chown -R $USER:$USER output
 
-run-vm rebuild="0" type="qcow2" ram="6GiB":
+run-vm rebuild="0" type="qcow2" ram="6GB":
   #!/usr/bin/env bash
 
   set -euo pipefail

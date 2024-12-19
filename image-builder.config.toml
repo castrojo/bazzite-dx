@@ -1,8 +1,27 @@
-[[customizations.user]]
-name = "centos"
-password = "centos"
-groups = ["wheel"]
+[customizations.installer]
+unattended = false
 
-[[customizations.filesystem]]
-mountpoint = "/"
-minsize = "20 GiB"
+[customizations.installer.modules]
+enable = [
+  "org.fedoraproject.Anaconda.Modules.Localization",
+  "org.fedoraproject.Anaconda.Modules.Network",
+  "org.fedoraproject.Anaconda.Modules.Payloads",
+  "org.fedoraproject.Anaconda.Modules.Runtime",
+  "org.fedoraproject.Anaconda.Modules.Security",
+  "org.fedoraproject.Anaconda.Modules.Services",
+  "org.fedoraproject.Anaconda.Modules.Storage",
+  "org.fedoraproject.Anaconda.Modules.Subscription",
+  "org.fedoraproject.Anaconda.Modules.Timezone",
+  "org.fedoraproject.Anaconda.Modules.Users" 
+]
+
+
+[customizations.installer.kickstart]
+contents = """
+%post --no-chroot
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+flatpak install flathub com.github.tchx84.Flatseal -y
+flatpak install flathub org.keepassxc.KeePassXC -y
+%end
+"""
+
